@@ -1,4 +1,8 @@
-# myPythonLib
+# myPythonLib (beta 1.0)
+```python
+import dnMath
+```
+
 ## dnMath.sim()
 Simple addition and multiplication with any amount of numbers
 Initialisation syntax:
@@ -6,12 +10,13 @@ Initialisation syntax:
 var = dnMath.sim(*args) #Abritary amount of arguments
 ```
 
+
 For addition (getting the sum):
 ```python
 var.add()
 ```
 
-For Multiplication (getting the product):
+For multiplication (getting the product):
 ```python
 var.mul()
 ```
