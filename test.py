@@ -1,6 +1,7 @@
+# Developer Testing Only
+
 import dnMath
-
-
-d = dnMath.calculus(2,3,3,3)
-print(d.ddxp())
-print(d.ddxf())
+i = dnMath.calculus(2,6,0,0)
+print(i.ddxf())
+print(i.itg())
+print(i.itgf())

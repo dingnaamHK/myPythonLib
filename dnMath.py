@@ -70,10 +70,10 @@ class calculus:
     def ddxf(self):
         # get the formula
         cList = self.ddxp()
-    
+        print("d/dx = ", end="")
         for (i,j) in enumerate(cList):
             if self.power - i > 0:
-                print("d/dx =",j, "x ^", self.power - i, "+ ", end="")
+                print(j, "x ^", self.power - i, "+ ", end="")
             elif self.power - i == 0:
                 print(j) 
             else:
@@ -82,3 +82,31 @@ class calculus:
         ### TODO IMPROVE: unexpected "None" after last term.
 
 
+    def itg(self):
+        # integration to a polynomial
+        newCoefficents = list()
+        #Logic : p + 1 -> p THEN c / p -> c
+        c = 0
+        p = self.power
+        while c < len(self.coefficients) and (p <= self.power and p >= 0):
+            p -= 1
+            newCoefficientsElement = self.coefficients[c] / (p + 1)
+            newCoefficents.append(newCoefficientsElement)
+            c += 1
+            if len(newCoefficents) == c:
+                continue
+            else:
+                break        
+        return newCoefficents
+
+    def itgf(self):
+        cList = self.itg()
+        print("∫f(x) dx = ", end="")
+        for (i,j) in enumerate(cList):
+            if self.power - i > 0:
+                print(j, "x ^", self.power + i, "+ ", end="")
+            elif self.power - i == 0:
+                print(j) 
+            else:
+                break
+        print("C")  # Indefinite integral constant
