@@ -45,8 +45,8 @@ var.ddxp()
 ```
 Please MAKE SURE the value of argument "power' is equal to the number of other proceding arguments, for example:
 ```python
-var = dnMath.calculate(2,3,3,3)   # This is valid
-var = dnMath.calculate(2,3,3,3,3,3,3) # This will cause an exceptio
+var = dnMath.calculus(2,3,3,3)   # This is valid
+var = dnMath.calculus(2,3,3,3,3,3,3) # This will cause an exceptio
 ```
 ### Show the Polynomial for Easier Reading
 After running ddxp(), a list will be returned.
