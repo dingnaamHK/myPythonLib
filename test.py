@@ -1,7 +1,5 @@
 import dnMath
 
 
-num = dnMath.sim()
-print(num.add())
-print(num.mul())
-
+d = dnMath.calculus(2, 3, 3, 3)
+print(d.ddxp())
