@@ -1,8 +1,12 @@
-# myPythonLib (beta 2.0)
+Table of Contents:
+1. [dnMath.sim() - Simple Calculations] (## dnMath.sim())
+2. [dnMath.calculus() - Differentiation] (## dnMath.calculus())
+
+
+# dnMath (beta 2.0)
 ```python
 import dnMath
-```
-
+``` 
 ## dnMath.sim() 
 Simple addition and multiplication with any amount of numbers
 Initialisation syntax:
