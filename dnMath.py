@@ -56,16 +56,29 @@ class calculus:
         newCoefficents = list()
         c = 0
         p = self.power 
-        while c < len(self.coefficients):
-            while p <= self.power and p >= 0:
-                newCoefficentsElement = c * p
-                newCoefficents.append(newCoefficentsElement)
-                p -= 1
-                if len(newCoefficents) == c:
-                    continue
-                else:
-                    break        
-            c += 1     
+        while c < len(self.coefficients) and (p <= self.power and p >= 0):
+            newCoefficentsElement = self.coefficients[c] * p
+            newCoefficents.append(newCoefficentsElement)
+            p -= 1
+            c += 1
+            if len(newCoefficents) == c:
+                continue
+            else:
+                break        
         return newCoefficents
+    
+    def ddxf(self):
+        # get the formula
+        cList = self.ddxp()
+    
+        for (i,j) in enumerate(cList):
+            if self.power - i > 0:
+                print("d/dx =",j, "x ^", self.power - i, "+ ", end="")
+            elif self.power - i == 0:
+                print(j) 
+            else:
+                break
+
+        ### TODO IMPROVE: unexpected "None" after last term.
 
 

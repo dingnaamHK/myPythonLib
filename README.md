@@ -1,4 +1,4 @@
-# myPythonLib (beta 1.0)
+# myPythonLib (beta 2.0)
 ```python
 import dnMath
 ```
@@ -32,3 +32,26 @@ var.addFromRange()
 ```
 IMPORTANT: the value of arg2 must be larger than that of arg1.
 
+## dnMath.calculus()
+### Differentiate a Polynomial
+The arguments can be divided into three parts.  Namely, power of polynomial, and coefficient(s) of the polynomial, and the constant term of the polynomial.
+```python
+var = dnMath.calculus(power, coefficient1, coefficient2, ..., constantTerm)
+var.ddxp()
+```
+Please MAKE SURE the value of argument "power' is equal to the number of other proceding arguments, for example:
+```python
+var = dnMath.calculate(2,3,3,3)   # This is valid
+var = dnMath.calculate(2,3,3,3,3,3,3) # This will cause an exceptio
+```
+### Show the Polynomial for Easier Reading
+After running ddxp(), a list will be returned.
+To show the math expression, please do the following command after that.
+```python
+var.ddxf()
+```
+For example when ddxp() returns [6,3,0], the result of ddxf() will be:
+d/dx = 6 x ^ 2 + d/dx = 3 x ^ 1 + 0
+None
+
+** There is a bug that an extra None will returned by ddx(), this minor problem will be fixed soon.  No affect to the precision of the result.
