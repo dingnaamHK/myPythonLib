@@ -1,7 +1,7 @@
 Table of Contents:
 1. [dnMath.sim() - Simple Calculations](##dnMath.sim())
 2. [dnMath.calculus() - Differentiation](##dnMath.calculus())
-3. [dnMath.stats() - Statistis](##dnMath.stats())
+3. [dnMath.stats() - Statistics](##dnMath.stats())
 
 
 # dnMath (Version 1.0)
