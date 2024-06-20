@@ -1,9 +1,10 @@
 Table of Contents:
-1. [dnMath.sim() - Simple Calculations] (## dnMath.sim())
-2. [dnMath.calculus() - Differentiation] (## dnMath.calculus())
+1. [dnMath.sim() - Simple Calculations](##dnMath.sim())
+2. [dnMath.calculus() - Differentiation](##dnMath.calculus())
+3. [dnMath.stats() - Statistis](##dnMath.stats())
 
 
-# dnMath (beta 3.0)
+# dnMath (beta 4.0)
 ```python
 import dnMath
 ``` 
@@ -75,4 +76,27 @@ A list will be returned where those elemnts are the coefficients corresponding t
 To show the math expression, please use the following method.
 ```python
 var.itgf()
+```
+
+## dnMath.stats()
+This can be used to handle some statistics related problems.
+```python
+var = dnMath.stats()
+```
+### Input the dataset
+Please input your data through the following mehtod
+```python
+var.setData(*args) # insert your arguments in the parentheses
+```
+
+### Find Mean Value
+By input every datum in the dataset as arguments, this can able to calculate to population mean.
+```python
+var.mean()
+```
+
+### Find Standard Deviation
+By input every datum in the dataset as argument, the standard deviation can be found.
+```python
+var.sd()
 ```

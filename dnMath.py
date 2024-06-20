@@ -111,3 +111,32 @@ class calculus:
             else:
                 break
         print(" + C")  # Indefinite integral constant
+
+class stats:
+    def __init__(self):
+        pass
+    
+    def setData(self, *datum):
+        self.data = list()
+        for i in datum:
+            self.data.append(i)
+        
+    def mean(self):
+        sum = 0
+        for i in self.data:
+            sum += i
+        finalMean = sum / len(self.data)
+        return finalMean
+    
+    def sd(self):
+        #Standard deviation\
+        m = self.mean()
+        sum = 0
+        for i in self.data:
+            sum += i
+        temp = 0
+        for j in range(len(self.data)):
+            temp += (self.data[j]  - m) ** 2
+        temp = temp / len(self.data)
+        sigma = (temp ** (1/2)) 
+        return sigma
