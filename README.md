@@ -3,7 +3,7 @@ Table of Contents:
 2. [dnMath.calculus() - Differentiation] (## dnMath.calculus())
 
 
-# dnMath (beta 2.0)
+# dnMath (beta 3.0)
 ```python
 import dnMath
 ``` 
@@ -37,20 +37,24 @@ var.addFromRange()
 IMPORTANT: the value of arg2 must be larger than that of arg1.
 
 ## dnMath.calculus()
-### Differentiate a Polynomial
 The arguments can be divided into three parts.  Namely, power of polynomial, and coefficient(s) of the polynomial, and the constant term of the polynomial.
 ```python
 var = dnMath.calculus(power, coefficient1, coefficient2, ..., constantTerm)
-var.ddxp()
 ```
 Please MAKE SURE the value of argument "power' is equal to the number of other proceding arguments, for example:
 ```python
 var = dnMath.calculus(2,3,3,3)   # This is valid
 var = dnMath.calculus(2,3,3,3,3,3,3) # This will cause an exceptio
 ```
-### Show the Polynomial for Easier Reading
+### Differentiate a Polynomial
+This can be used to differentate a polynomial.
+```python
+var.ddxp()
+```
+A list will be returned where those elemnts are the coefficients corresponding to decending order of power ofthe polynomial.
+### Show the Differentiated Polynomial for Easier Reading
 After running ddxp(), a list will be returned.
-To show the math expression, please do the following command after that.
+To show the math expression, please do the following command.
 ```python
 var.ddxf()
 ```
@@ -59,3 +63,16 @@ d/dx = 6 x ^ 2 + d/dx = 3 x ^ 1 + 0
 None
 
 ** There is a bug that an extra None will returned by ddx(), this minor problem will be fixed soon.  No affect to the precision of the result.
+
+### Integrattion of Polynomial
+The arguments can be divided into three parts.  Namely, power of polynomial, and coefficient(s) of the polynomial, and the constant term of the polynomial.
+```python
+var.itg()
+```
+A list will be returned where those elemnts are the coefficients corresponding to decending order of power ofthe polynomial.
+
+### Show the Integrated Polynomial for Easier Reading
+To show the math expression, please use the following method.
+```python
+var.itgf()
+```

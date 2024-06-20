@@ -89,10 +89,11 @@ class calculus:
         c = 0
         p = self.power
         while c < len(self.coefficients) and (p <= self.power and p >= 0):
-            p -= 1
-            newCoefficientsElement = self.coefficients[c] / (p + 1)
+            x = p + 1
+            newCoefficientsElement = self.coefficients[c] / x
             newCoefficents.append(newCoefficientsElement)
             c += 1
+            p -= 1
             if len(newCoefficents) == c:
                 continue
             else:
@@ -104,9 +105,9 @@ class calculus:
         print("∫f(x) dx = ", end="")
         for (i,j) in enumerate(cList):
             if self.power - i > 0:
-                print(j, "x ^", self.power + i, "+ ", end="")
+                print(j, "x ^", self.power - i, "+ ", end="")
             elif self.power - i == 0:
-                print(j) 
+                print(j, end="") 
             else:
                 break
-        print("C")  # Indefinite integral constant
+        print(" + C")  # Indefinite integral constant

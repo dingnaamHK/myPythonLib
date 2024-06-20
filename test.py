@@ -1,6 +1,4 @@
 # Developer Testing Only
-
 import dnMath
-
-var = dnMath.sim(1,10)
-print(var.addFromRange())
+x = dnMath.calculus(3, -7, 8, 9, 7)
+print(x.ddxf())
