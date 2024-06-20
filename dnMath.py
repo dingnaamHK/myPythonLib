@@ -140,3 +140,4 @@ class stats:
         temp = temp / len(self.data)
         sigma = (temp ** (1/2)) 
         return sigma
+    

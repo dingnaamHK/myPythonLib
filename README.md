@@ -4,7 +4,7 @@ Table of Contents:
 3. [dnMath.stats() - Statistis](##dnMath.stats())
 
 
-# dnMath (beta 4.0)
+# dnMath (Version 1.0)
 ```python
 import dnMath
 ``` 
