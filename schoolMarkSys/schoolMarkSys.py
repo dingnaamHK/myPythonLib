@@ -32,6 +32,13 @@ class studentInfo:
         cList = list()
         self.classNo = classNo
 
+    def recentlyTeaching(self):
+        self.teaching = open("data/classes.txt", "r")
+        self.strTeaching = str()
+        self.strTeaching.join(self.teaching.readlines())
+        self.teaching.close()
+        return self.strTeaching
+    
     def reset(self, filepath):
         # TODO: MUST ADD VERIFICATION TO RESET ALL DATA
         # TMEP CLI Verification
